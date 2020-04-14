@@ -5,6 +5,7 @@ import Box from "@material-ui/core/Box";
 import ProTip from "../components/ProTip";
 import Link from "../components/Link";
 import Copyright from "../components/Copyright";
+import { Button } from "@material-ui/core";
 
 export default function Index() {
   return (
@@ -16,6 +17,16 @@ export default function Index() {
         <Link href="/about" color="secondary">
           Go to the about page
         </Link>
+        <br />
+        <Button
+          variant="contained"
+          color="default"
+          component={Link}
+          naked
+          href="/dashboard"
+        >
+          Dashboard
+        </Button>
         <ProTip />
         <Copyright />
       </Box>

@@ -2065,8 +2065,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_ProTip__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/ProTip */ "./src/components/ProTip.js");
 /* harmony import */ var _components_Link__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../components/Link */ "./src/components/Link.js");
 /* harmony import */ var _components_Copyright__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../components/Copyright */ "./src/components/Copyright.js");
+/* harmony import */ var _material_ui_core__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @material-ui/core */ "@material-ui/core");
+/* harmony import */ var _material_ui_core__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core__WEBPACK_IMPORTED_MODULE_7__);
 var _jsxFileName = "C:\\Users\\anana\\Project\\covid-app\\src\\pages\\index.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
 
 
 
@@ -2080,7 +2083,7 @@ function Index() {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 11,
+      lineNumber: 12,
       columnNumber: 5
     }
   }, __jsx(_material_ui_core_Box__WEBPACK_IMPORTED_MODULE_3___default.a, {
@@ -2088,7 +2091,7 @@ function Index() {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 12,
+      lineNumber: 13,
       columnNumber: 7
     }
   }, __jsx(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_2___default.a, {
@@ -2098,7 +2101,7 @@ function Index() {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 13,
+      lineNumber: 14,
       columnNumber: 9
     }
   }, "Next.js example"), __jsx(_components_Link__WEBPACK_IMPORTED_MODULE_5__["default"], {
@@ -2107,21 +2110,40 @@ function Index() {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 16,
+      lineNumber: 17,
       columnNumber: 9
     }
-  }, "Go to the about page"), __jsx(_components_ProTip__WEBPACK_IMPORTED_MODULE_4__["default"], {
+  }, "Go to the about page"), __jsx("br", {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 19,
+      lineNumber: 20,
+      columnNumber: 9
+    }
+  }), __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_7__["Button"], {
+    variant: "contained",
+    color: "default",
+    component: _components_Link__WEBPACK_IMPORTED_MODULE_5__["default"],
+    naked: true,
+    href: "/dashboard",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 21,
+      columnNumber: 9
+    }
+  }, "Dashboard"), __jsx(_components_ProTip__WEBPACK_IMPORTED_MODULE_4__["default"], {
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 30,
       columnNumber: 9
     }
   }), __jsx(_components_Copyright__WEBPACK_IMPORTED_MODULE_6__["default"], {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 20,
+      lineNumber: 31,
       columnNumber: 9
     }
   })));
@@ -2138,6 +2160,17 @@ function Index() {
 
 module.exports = __webpack_require__(/*! C:\Users\anana\Project\covid-app\src\pages\index.js */"./src/pages/index.js");
 
+
+/***/ }),
+
+/***/ "@material-ui/core":
+/*!************************************!*\
+  !*** external "@material-ui/core" ***!
+  \************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("@material-ui/core");
 
 /***/ }),
 
