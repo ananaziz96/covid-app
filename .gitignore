@@ -16,3 +16,12 @@ yarn-error.log*
 
 # Next.js
 /.next
+
+# Build files
+.next/build-manifest.json
+.next/server/pages-manifest.json
+.next/server/static/development/pages/index.js
+.next/static/development/pages/index.js
+.next/static/runtime/webpack.js
+.next/static/runtime/webpack.js.map
+.next/static/webpack/7d7ad335fd81b1cbe072.hot-update.json
