@@ -2068,6 +2068,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _material_ui_core__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core__WEBPACK_IMPORTED_MODULE_7__);
 /* harmony import */ var isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! isomorphic-unfetch */ "isomorphic-unfetch");
 /* harmony import */ var isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var react_chartjs_2__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! react-chartjs-2 */ "react-chartjs-2");
+/* harmony import */ var react_chartjs_2__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(react_chartjs_2__WEBPACK_IMPORTED_MODULE_9__);
 var _jsxFileName = "C:\\Users\\anana\\Project\\covid-app\\src\\pages\\index.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
@@ -2077,25 +2079,15 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
 
- // import Link from "next/link";
 
- //import { XMLHttpRequest } from "../../node_modules/xmlhttprequest/lib/XMLHttpRequest";
-//const RequestService = require("../../functions/utils.js");
-// var XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
-//var requestService = new RequestService();
-// var XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
-// var request = new XMLHttpRequest();
-// request.open("GET", url);
-// request.send(null);
-// alert(request.status);
-// let covidapi = httpGet(url);
-// console.log(covidapi);
+
+
 
 const Index = props => __jsx(_material_ui_core_Container__WEBPACK_IMPORTED_MODULE_1___default.a, {
   __self: undefined,
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 27,
+    lineNumber: 13,
     columnNumber: 3
   }
 }, __jsx(_material_ui_core_Box__WEBPACK_IMPORTED_MODULE_3___default.a, {
@@ -2103,17 +2095,16 @@ const Index = props => __jsx(_material_ui_core_Container__WEBPACK_IMPORTED_MODUL
   __self: undefined,
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 28,
+    lineNumber: 14,
     columnNumber: 5
   }
 }, __jsx(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_2___default.a, {
-  variant: "h4",
+  variant: "h1",
   component: "h1",
-  gutterBottom: true,
   __self: undefined,
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 29,
+    lineNumber: 15,
     columnNumber: 7
   }
 }, "Hi! Welcome to the Covid App"), __jsx(_components_Link__WEBPACK_IMPORTED_MODULE_5__["default"], {
@@ -2122,77 +2113,72 @@ const Index = props => __jsx(_material_ui_core_Container__WEBPACK_IMPORTED_MODUL
   __self: undefined,
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 32,
+    lineNumber: 18,
     columnNumber: 7
   }
-}, "Built with \u2764\uFE0F by Anan Aziz")), __jsx("h1", {
+}, "Built with \u2764\uFE0F by Anan"), __jsx("br", {
   __self: undefined,
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 38,
-    columnNumber: 5
-  }
-}, "Covid-19 Cases in Bangladesh"), __jsx("table", {
-  style: {
-    borderSpacing: "50px 0"
-  },
-  __self: undefined,
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 39,
-    columnNumber: 5
-  }
-}, __jsx("tr", {
-  __self: undefined,
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 40,
+    lineNumber: 21,
     columnNumber: 7
   }
-}, __jsx("th", {
+}), __jsx("br", {
   __self: undefined,
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 41,
-    columnNumber: 9
+    lineNumber: 22,
+    columnNumber: 7
   }
-}, "Date"), __jsx("th", {
+}), __jsx(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_2___default.a, {
+  variant: "h3",
+  component: "h1",
+  gutterBottom: true,
   __self: undefined,
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 42,
-    columnNumber: 9
+    lineNumber: 23,
+    columnNumber: 7
   }
-}, "Case of infected")), props.data.map(show => __jsx("tr", {
+}, "Total cases of Covid-19 in Bangladesh 2020 \uD83D\uDCC8")), __jsx(react_chartjs_2__WEBPACK_IMPORTED_MODULE_9__["Line"], {
+  data: props.chartData,
+  height: 500,
+  width: 1200,
   __self: undefined,
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 45,
-    columnNumber: 9
+    lineNumber: 28,
+    columnNumber: 5
   }
-}, __jsx("td", {
-  __self: undefined,
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 46,
-    columnNumber: 11
-  }
-}, show.Date), __jsx("td", {
-  __self: undefined,
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 47,
-    columnNumber: 11
-  }
-}, show.Cases)))));
+}));
 
 Index.getInitialProps = async function () {
   const url = "https://api.covid19api.com/dayone/country/bangladesh/status/confirmed/live";
   const res = await isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_8___default()(url);
   const data = await res.json();
-  console.log(`Show data fetched. Count: ${data.length}`);
+  let xAxis = [];
+  let xAxisTemp = data.map(entry => entry.Date);
+  let yAxis = data.map(entry => entry.Cases);
+  let arrayLength = xAxisTemp.length;
+
+  const moment = __webpack_require__(/*! moment */ "moment");
+
+  for (let i = 0; i < arrayLength; i++) {
+    xAxis.push(moment(xAxisTemp[i]).format("MMMM Do"));
+  }
+
+  let chartData = {
+    labels: xAxis,
+    datasets: [{
+      label: "Infected",
+      backgroundColor: "rgb(255, 99, 132)",
+      borderColor: "rgb(255, 99, 132)",
+      data: yAxis
+    }]
+  };
   return {
-    data: data.map(entry => entry)
+    data: data.map(entry => entry),
+    chartData: chartData
   };
 };
 
@@ -2311,6 +2297,17 @@ module.exports = require("isomorphic-unfetch");
 
 /***/ }),
 
+/***/ "moment":
+/*!*************************!*\
+  !*** external "moment" ***!
+  \*************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("moment");
+
+/***/ }),
+
 /***/ "next/router":
 /*!******************************!*\
   !*** external "next/router" ***!
@@ -2352,6 +2349,17 @@ module.exports = require("prop-types-exact");
 /***/ (function(module, exports) {
 
 module.exports = require("react");
+
+/***/ }),
+
+/***/ "react-chartjs-2":
+/*!**********************************!*\
+  !*** external "react-chartjs-2" ***!
+  \**********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("react-chartjs-2");
 
 /***/ }),
 

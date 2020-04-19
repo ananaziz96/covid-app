@@ -6,48 +6,26 @@ import ProTip from "../components/ProTip";
 import Link from "../components/Link";
 import Copyright from "../components/Copyright";
 import { Button } from "@material-ui/core";
-// import Link from "next/link";
 import fetch from "isomorphic-unfetch";
-
-//import { XMLHttpRequest } from "../../node_modules/xmlhttprequest/lib/XMLHttpRequest";
-//const RequestService = require("../../functions/utils.js");
-// var XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
-//var requestService = new RequestService();
-// var XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
-
-// var request = new XMLHttpRequest();
-// request.open("GET", url);
-// request.send(null);
-// alert(request.status);
-
-// let covidapi = httpGet(url);
-// console.log(covidapi);
+import { Line } from "react-chartjs-2";
 
 const Index = (props) => (
   <Container>
     <Box my={4}>
-      <Typography variant="h4" component="h1" gutterBottom>
+      <Typography variant="h1" component="h1">
         Hi! Welcome to the Covid App
       </Typography>
       <Link href="https://ananaziz96.github.io/cv/" color="secondary">
-        Built with ❤️ by Anan Aziz
+        Built with ❤️ by Anan
       </Link>
-      {/* <ProTip /> */}
-      {/* <Copyright /> */}
+      <br />
+      <br />
+      <Typography variant="h3" component="h1" gutterBottom>
+        Total cases of Covid-19 in Bangladesh 2020 📈
+      </Typography>
     </Box>
-    <h1>Covid-19 Cases in Bangladesh</h1>
-    <table style={{ borderSpacing: "50px 0" }}>
-      <tr>
-        <th>Date</th>
-        <th>Case of infected</th>
-      </tr>
-      {props.data.map((show) => (
-        <tr>
-          <td>{show.Date}</td>
-          <td>{show.Cases}</td>
-        </tr>
-      ))}
-    </table>
+
+    <Line data={props.chartData} height={500} width={1200} />
   </Container>
 );
 
@@ -56,11 +34,31 @@ Index.getInitialProps = async function () {
     "https://api.covid19api.com/dayone/country/bangladesh/status/confirmed/live";
   const res = await fetch(url);
   const data = await res.json();
+  let xAxis = [];
+  let xAxisTemp = data.map((entry) => entry.Date);
+  let yAxis = data.map((entry) => entry.Cases);
+  let arrayLength = xAxisTemp.length;
+  const moment = require("moment");
 
-  console.log(`Show data fetched. Count: ${data.length}`);
+  for (let i = 0; i < arrayLength; i++) {
+    xAxis.push(moment(xAxisTemp[i]).format("MMMM Do"));
+  }
+
+  let chartData = {
+    labels: xAxis,
+    datasets: [
+      {
+        label: "Infected",
+        backgroundColor: "rgb(255, 99, 132)",
+        borderColor: "rgb(255, 99, 132)",
+        data: yAxis,
+      },
+    ],
+  };
 
   return {
     data: data.map((entry) => entry),
+    chartData: chartData,
   };
 };
 
