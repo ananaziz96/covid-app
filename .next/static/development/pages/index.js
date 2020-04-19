@@ -91766,8 +91766,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _material_ui_core_Container__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @material-ui/core/Container */ "./node_modules/@material-ui/core/esm/Container/index.js");
-/* harmony import */ var _material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @material-ui/core/Typography */ "./node_modules/@material-ui/core/esm/Typography/index.js");
+/* harmony import */ var _material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @material-ui/core/Typography */ "./node_modules/@material-ui/core/esm/Typography/index.js");
+/* harmony import */ var _material_ui_core_Container__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @material-ui/core/Container */ "./node_modules/@material-ui/core/esm/Container/index.js");
 /* harmony import */ var _material_ui_core_Box__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @material-ui/core/Box */ "./node_modules/@material-ui/core/esm/Box/index.js");
 /* harmony import */ var _components_ProTip__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../components/ProTip */ "./src/components/ProTip.js");
 /* harmony import */ var _components_Link__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../components/Link */ "./src/components/Link.js");
@@ -91794,78 +91794,81 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
 
 
 var Index = function Index(props) {
-  return __jsx(_material_ui_core_Container__WEBPACK_IMPORTED_MODULE_2__["default"], {
+  return __jsx(_material_ui_core_Container__WEBPACK_IMPORTED_MODULE_3__["default"], {
+    style: {
+      textAlign: "center"
+    },
     __self: _this,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 13,
       columnNumber: 3
     }
-  }, __jsx(_material_ui_core_Box__WEBPACK_IMPORTED_MODULE_4__["default"], {
-    my: 4,
+  }, __jsx(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    variant: "h1",
+    component: "h1",
     __self: _this,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 14,
       columnNumber: 5
     }
-  }, __jsx(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_3__["default"], {
-    variant: "h1",
-    component: "h1",
+  }, "Hi! Welcome to the ", __jsx("br", {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 15,
-      columnNumber: 7
+      columnNumber: 26
     }
-  }, "Hi! Welcome to the Covid App"), __jsx(_components_Link__WEBPACK_IMPORTED_MODULE_6__["default"], {
-    href: "https://ananaziz96.github.io/cv/",
-    color: "secondary",
+  }), " Covid App"), __jsx("span", {
+    style: {
+      color: "rgb(255, 99, 132)"
+    },
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 18,
-      columnNumber: 7
+      lineNumber: 17,
+      columnNumber: 5
     }
   }, "Built with \u2764\uFE0F by Anan"), __jsx("br", {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 21,
-      columnNumber: 7
+      lineNumber: 18,
+      columnNumber: 5
     }
   }), __jsx("br", {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 22,
-      columnNumber: 7
+      lineNumber: 19,
+      columnNumber: 5
     }
-  }), __jsx(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_3__["default"], {
+  }), __jsx(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_2__["default"], {
     variant: "h3",
     component: "h1",
     gutterBottom: true,
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 23,
-      columnNumber: 7
+      lineNumber: 20,
+      columnNumber: 5
     }
-  }, "Total cases of Covid-19 in Bangladesh 2020 \uD83D\uDCC8")), __jsx(react_chartjs_2__WEBPACK_IMPORTED_MODULE_10__["Line"], {
+  }, "Total cases of Covid-19 in Bangladesh 2020 \uD83D\uDCC8"), __jsx(react_chartjs_2__WEBPACK_IMPORTED_MODULE_10__["Line"], {
     data: props.chartData,
     height: 500,
     width: 1200,
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 28,
+      lineNumber: 24,
       columnNumber: 5
     }
   }));
 };
 
 Index.getInitialProps = function _callee() {
-  var url, res, data, xAxis, xAxisTemp, yAxis, arrayLength, moment, i, chartData;
+  var url, res, data, xAxis, yAxis, xAxisTemp, yAxisTemp, arrayLength, moment, i, chartData;
   return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.async(function _callee$(_context) {
     while (1) {
       switch (_context.prev = _context.next) {
@@ -91882,17 +91885,19 @@ Index.getInitialProps = function _callee() {
         case 6:
           data = _context.sent;
           xAxis = [];
+          yAxis = [];
           xAxisTemp = data.map(function (entry) {
             return entry.Date;
           });
-          yAxis = data.map(function (entry) {
+          yAxisTemp = data.map(function (entry) {
             return entry.Cases;
           });
           arrayLength = xAxisTemp.length;
           moment = __webpack_require__(/*! moment */ "./node_modules/moment/moment.js");
 
-          for (i = 0; i < arrayLength; i++) {
+          for (i = 25; i < arrayLength; i++) {
             xAxis.push(moment(xAxisTemp[i]).format("MMMM Do"));
+            yAxis.push(yAxisTemp[i]);
           }
 
           chartData = {
@@ -91900,7 +91905,7 @@ Index.getInitialProps = function _callee() {
             datasets: [{
               label: "Infected",
               backgroundColor: "rgb(255, 99, 132)",
-              borderColor: "rgb(255, 99, 132)",
+              borderColor: "rgb(255, 1, 132)",
               data: yAxis
             }]
           };
@@ -91911,7 +91916,7 @@ Index.getInitialProps = function _callee() {
             chartData: chartData
           });
 
-        case 15:
+        case 16:
         case "end":
           return _context.stop();
       }
