@@ -92111,8 +92111,7 @@ Index.getInitialProps = function _callee() {
             return entry.Cases;
           });
           arrayLength = xAxisTemp.length;
-          moment = __webpack_require__(/*! moment */ "./node_modules/moment/moment.js");
-          console.log(data); //looping through response array and changing date format
+          moment = __webpack_require__(/*! moment */ "./node_modules/moment/moment.js"); //looping through response array and changing date format
 
           for (i = 25; i < arrayLength; i++) {
             xAxis.push(moment(xAxisTemp[i]).format("MMMM Do"));
@@ -92130,15 +92129,15 @@ Index.getInitialProps = function _callee() {
           }; //GET covid tweets
 
           allStatsUrl = "https://api.covid19api.com/live/country/bangladesh";
-          _context.next = 19;
+          _context.next = 18;
           return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.awrap(isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_13___default()(allStatsUrl));
 
-        case 19:
+        case 18:
           resAllStatsApi = _context.sent;
-          _context.next = 22;
+          _context.next = 21;
           return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.awrap(resAllStatsApi.json());
 
-        case 22:
+        case 21:
           allStats = _context.sent;
           //last item is the lattest available day
           lastItem = allStats[allStats.length - 1];
@@ -92152,7 +92151,7 @@ Index.getInitialProps = function _callee() {
             dateToday: dateToday
           });
 
-        case 26:
+        case 25:
         case "end":
           return _context.stop();
       }

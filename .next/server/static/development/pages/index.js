@@ -2388,9 +2388,8 @@ Index.getInitialProps = async function () {
   let yAxisTemp = data.map(entry => entry.Cases);
   let arrayLength = xAxisTemp.length;
 
-  const moment = __webpack_require__(/*! moment */ "moment");
+  const moment = __webpack_require__(/*! moment */ "moment"); //looping through response array and changing date format
 
-  console.log(data); //looping through response array and changing date format
 
   for (let i = 25; i < arrayLength; i++) {
     xAxis.push(moment(xAxisTemp[i]).format("MMMM Do"));

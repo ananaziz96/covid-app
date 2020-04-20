@@ -109,8 +109,6 @@ Index.getInitialProps = async function () {
   let arrayLength = xAxisTemp.length;
   const moment = require("moment");
 
-  console.log(data);
-
   //looping through response array and changing date format
   for (let i = 25; i < arrayLength; i++) {
     xAxis.push(moment(xAxisTemp[i]).format("MMMM Do"));
