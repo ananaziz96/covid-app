@@ -91925,13 +91925,13 @@ var Index = function Index(props) {
       lineNumber: 41,
       columnNumber: 13
     }
-  }, props.statToday.Confirmed)))), __jsx(_material_ui_core_Grid__WEBPACK_IMPORTED_MODULE_5__["default"], {
+  }, props.statToday.Confirmed ? props.statToday.Confirmed : "N/A")))), __jsx(_material_ui_core_Grid__WEBPACK_IMPORTED_MODULE_5__["default"], {
     item: true,
     md: 3,
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 46,
+      lineNumber: 48,
       columnNumber: 7
     }
   }, __jsx(_material_ui_core_Card__WEBPACK_IMPORTED_MODULE_4__["default"], {
@@ -91941,14 +91941,14 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 47,
+      lineNumber: 49,
       columnNumber: 9
     }
   }, __jsx(_material_ui_core_CardContent__WEBPACK_IMPORTED_MODULE_7__["default"], {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 48,
+      lineNumber: 50,
       columnNumber: 11
     }
   }, __jsx(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_2__["default"], {
@@ -91957,7 +91957,7 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 49,
+      lineNumber: 51,
       columnNumber: 13
     }
   }, "Total active"), __jsx(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_2__["default"], {
@@ -91966,7 +91966,7 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 52,
+      lineNumber: 54,
       columnNumber: 13
     }
   }, "Last updated ", props.dateToday), __jsx(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_2__["default"], {
@@ -91974,16 +91974,16 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 55,
+      lineNumber: 57,
       columnNumber: 13
     }
-  }, props.statToday.Active)))), __jsx(_material_ui_core_Grid__WEBPACK_IMPORTED_MODULE_5__["default"], {
+  }, props.statToday.Active ? props.statToday.Active : "N/A")))), __jsx(_material_ui_core_Grid__WEBPACK_IMPORTED_MODULE_5__["default"], {
     item: true,
     md: 3,
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 60,
+      lineNumber: 64,
       columnNumber: 7
     }
   }, __jsx(_material_ui_core_Card__WEBPACK_IMPORTED_MODULE_4__["default"], {
@@ -91993,14 +91993,14 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 61,
+      lineNumber: 65,
       columnNumber: 9
     }
   }, __jsx(_material_ui_core_CardContent__WEBPACK_IMPORTED_MODULE_7__["default"], {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 62,
+      lineNumber: 66,
       columnNumber: 11
     }
   }, __jsx(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_2__["default"], {
@@ -92009,7 +92009,7 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 63,
+      lineNumber: 67,
       columnNumber: 13
     }
   }, "Total deaths"), __jsx(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_2__["default"], {
@@ -92018,7 +92018,7 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 66,
+      lineNumber: 70,
       columnNumber: 13
     }
   }, "Last updated ", props.dateToday), __jsx(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_2__["default"], {
@@ -92026,16 +92026,16 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 69,
+      lineNumber: 73,
       columnNumber: 13
     }
-  }, props.statToday.Deaths)))), __jsx(_material_ui_core_Grid__WEBPACK_IMPORTED_MODULE_5__["default"], {
+  }, props.statToday.Deaths ? props.statToday.Deaths : "N/A")))), __jsx(_material_ui_core_Grid__WEBPACK_IMPORTED_MODULE_5__["default"], {
     item: true,
     md: 3,
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 74,
+      lineNumber: 80,
       columnNumber: 7
     }
   }, __jsx(_material_ui_core_Card__WEBPACK_IMPORTED_MODULE_4__["default"], {
@@ -92045,14 +92045,14 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 75,
+      lineNumber: 81,
       columnNumber: 9
     }
   }, __jsx(_material_ui_core_CardContent__WEBPACK_IMPORTED_MODULE_7__["default"], {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 76,
+      lineNumber: 82,
       columnNumber: 11
     }
   }, __jsx(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_2__["default"], {
@@ -92061,7 +92061,7 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 77,
+      lineNumber: 83,
       columnNumber: 13
     }
   }, "Total recovered"), __jsx(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_2__["default"], {
@@ -92070,7 +92070,7 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 80,
+      lineNumber: 86,
       columnNumber: 13
     }
   }, "Last updated ", props.dateToday), __jsx(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_2__["default"], {
@@ -92078,10 +92078,10 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 83,
+      lineNumber: 89,
       columnNumber: 13
     }
-  }, props.statToday.Recovered))))));
+  }, props.statToday.Recovered ? props.statToday.Recovered : "N/A"))))));
 };
 
 Index.getInitialProps = function _callee() {
