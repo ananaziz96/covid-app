@@ -38,7 +38,9 @@ const Index = (props) => (
             <Typography color="textSecondary" gutterBottom>
               Last updated {props.dateToday}
             </Typography>
-            <Typography variant="h1">{props.statToday.Confirmed}</Typography>
+            <Typography variant="h1">
+              {props.statToday.Confirmed ? props.statToday.Confirmed : "N/A"}
+            </Typography>
           </CardContent>
         </Card>
       </Grid>
@@ -52,7 +54,9 @@ const Index = (props) => (
             <Typography color="textSecondary" gutterBottom>
               Last updated {props.dateToday}
             </Typography>
-            <Typography variant="h1">{props.statToday.Active}</Typography>
+            <Typography variant="h1">
+              {props.statToday.Active ? props.statToday.Active : "N/A"}
+            </Typography>
           </CardContent>
         </Card>
       </Grid>
@@ -66,7 +70,9 @@ const Index = (props) => (
             <Typography color="textSecondary" gutterBottom>
               Last updated {props.dateToday}
             </Typography>
-            <Typography variant="h1">{props.statToday.Deaths}</Typography>
+            <Typography variant="h1">
+              {props.statToday.Deaths ? props.statToday.Deaths : "N/A"}
+            </Typography>
           </CardContent>
         </Card>
       </Grid>
@@ -80,7 +86,9 @@ const Index = (props) => (
             <Typography color="textSecondary" gutterBottom>
               Last updated {props.dateToday}
             </Typography>
-            <Typography variant="h1">{props.statToday.Recovered}</Typography>
+            <Typography variant="h1">
+              {props.statToday.Recovered ? props.statToday.Recovered : "N/A"}
+            </Typography>
           </CardContent>
         </Card>
       </Grid>
