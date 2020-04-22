@@ -13,6 +13,9 @@ import { Button } from "@material-ui/core";
 import fetch from "isomorphic-unfetch";
 import { Line } from "react-chartjs-2";
 import { makeStyles } from "@material-ui/core/styles";
+import Darkmode from "darkmode-js";
+
+new Darkmode().showWidget();
 
 const Index = (props) => (
   <Container style={{ textAlign: "center" }}>

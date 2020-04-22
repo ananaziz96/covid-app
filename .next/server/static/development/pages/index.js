@@ -2080,6 +2080,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_chartjs_2__WEBPACK_IMPORTED_MODULE_13___default = /*#__PURE__*/__webpack_require__.n(react_chartjs_2__WEBPACK_IMPORTED_MODULE_13__);
 /* harmony import */ var _material_ui_core_styles__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! @material-ui/core/styles */ "@material-ui/core/styles");
 /* harmony import */ var _material_ui_core_styles__WEBPACK_IMPORTED_MODULE_14___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core_styles__WEBPACK_IMPORTED_MODULE_14__);
+/* harmony import */ var darkmode_js__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! darkmode-js */ "darkmode-js");
+/* harmony import */ var darkmode_js__WEBPACK_IMPORTED_MODULE_15___default = /*#__PURE__*/__webpack_require__.n(darkmode_js__WEBPACK_IMPORTED_MODULE_15__);
 var _jsxFileName = "C:\\Users\\anana\\Project\\covid-app\\src\\pages\\index.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
@@ -2098,6 +2100,8 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
 
+new darkmode_js__WEBPACK_IMPORTED_MODULE_15___default.a().showWidget();
+
 const Index = props => __jsx(_material_ui_core_Container__WEBPACK_IMPORTED_MODULE_2___default.a, {
   style: {
     textAlign: "center"
@@ -2105,7 +2109,7 @@ const Index = props => __jsx(_material_ui_core_Container__WEBPACK_IMPORTED_MODUL
   __self: undefined,
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 18,
+    lineNumber: 21,
     columnNumber: 3
   }
 }, __jsx(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_1___default.a, {
@@ -2114,14 +2118,14 @@ const Index = props => __jsx(_material_ui_core_Container__WEBPACK_IMPORTED_MODUL
   __self: undefined,
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 19,
+    lineNumber: 22,
     columnNumber: 5
   }
 }, "Hi! Welcome to the ", __jsx("br", {
   __self: undefined,
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 20,
+    lineNumber: 23,
     columnNumber: 26
   }
 }), " Covid App"), __jsx("div", {
@@ -2132,7 +2136,7 @@ const Index = props => __jsx(_material_ui_core_Container__WEBPACK_IMPORTED_MODUL
   __self: undefined,
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 22,
+    lineNumber: 25,
     columnNumber: 5
   }
 }, "Built with \u2764\uFE0F by Anan"), __jsx(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_1___default.a, {
@@ -2142,7 +2146,7 @@ const Index = props => __jsx(_material_ui_core_Container__WEBPACK_IMPORTED_MODUL
   __self: undefined,
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 25,
+    lineNumber: 28,
     columnNumber: 5
   }
 }, "Total cases of Covid-19 in Bangladesh 2020 \uD83D\uDCC8"), __jsx(react_chartjs_2__WEBPACK_IMPORTED_MODULE_13__["Line"], {
@@ -2152,7 +2156,7 @@ const Index = props => __jsx(_material_ui_core_Container__WEBPACK_IMPORTED_MODUL
   __self: undefined,
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 29,
+    lineNumber: 32,
     columnNumber: 5
   }
 }), __jsx(_material_ui_core_Grid__WEBPACK_IMPORTED_MODULE_4___default.a, {
@@ -2164,7 +2168,7 @@ const Index = props => __jsx(_material_ui_core_Container__WEBPACK_IMPORTED_MODUL
   __self: undefined,
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 31,
+    lineNumber: 34,
     columnNumber: 5
   }
 }, __jsx(_material_ui_core_Grid__WEBPACK_IMPORTED_MODULE_4___default.a, {
@@ -2173,7 +2177,7 @@ const Index = props => __jsx(_material_ui_core_Container__WEBPACK_IMPORTED_MODUL
   __self: undefined,
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 32,
+    lineNumber: 35,
     columnNumber: 7
   }
 }, __jsx(_material_ui_core_Card__WEBPACK_IMPORTED_MODULE_3___default.a, {
@@ -2183,14 +2187,14 @@ const Index = props => __jsx(_material_ui_core_Container__WEBPACK_IMPORTED_MODUL
   __self: undefined,
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 33,
+    lineNumber: 36,
     columnNumber: 9
   }
 }, __jsx(_material_ui_core_CardContent__WEBPACK_IMPORTED_MODULE_6___default.a, {
   __self: undefined,
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 34,
+    lineNumber: 37,
     columnNumber: 11
   }
 }, __jsx(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_1___default.a, {
@@ -2199,7 +2203,7 @@ const Index = props => __jsx(_material_ui_core_Container__WEBPACK_IMPORTED_MODUL
   __self: undefined,
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 35,
+    lineNumber: 38,
     columnNumber: 13
   }
 }, "Total confirmed"), __jsx(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_1___default.a, {
@@ -2208,7 +2212,7 @@ const Index = props => __jsx(_material_ui_core_Container__WEBPACK_IMPORTED_MODUL
   __self: undefined,
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 38,
+    lineNumber: 41,
     columnNumber: 13
   }
 }, "Last updated ", props.dateToday), __jsx(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_1___default.a, {
@@ -2216,7 +2220,7 @@ const Index = props => __jsx(_material_ui_core_Container__WEBPACK_IMPORTED_MODUL
   __self: undefined,
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 41,
+    lineNumber: 44,
     columnNumber: 13
   }
 }, props.statToday.Confirmed ? props.statToday.Confirmed : "N/A")))), __jsx(_material_ui_core_Grid__WEBPACK_IMPORTED_MODULE_4___default.a, {
@@ -2225,7 +2229,7 @@ const Index = props => __jsx(_material_ui_core_Container__WEBPACK_IMPORTED_MODUL
   __self: undefined,
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 48,
+    lineNumber: 51,
     columnNumber: 7
   }
 }, __jsx(_material_ui_core_Card__WEBPACK_IMPORTED_MODULE_3___default.a, {
@@ -2235,14 +2239,14 @@ const Index = props => __jsx(_material_ui_core_Container__WEBPACK_IMPORTED_MODUL
   __self: undefined,
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 49,
+    lineNumber: 52,
     columnNumber: 9
   }
 }, __jsx(_material_ui_core_CardContent__WEBPACK_IMPORTED_MODULE_6___default.a, {
   __self: undefined,
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 50,
+    lineNumber: 53,
     columnNumber: 11
   }
 }, __jsx(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_1___default.a, {
@@ -2251,7 +2255,7 @@ const Index = props => __jsx(_material_ui_core_Container__WEBPACK_IMPORTED_MODUL
   __self: undefined,
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 51,
+    lineNumber: 54,
     columnNumber: 13
   }
 }, "Total active"), __jsx(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_1___default.a, {
@@ -2260,7 +2264,7 @@ const Index = props => __jsx(_material_ui_core_Container__WEBPACK_IMPORTED_MODUL
   __self: undefined,
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 54,
+    lineNumber: 57,
     columnNumber: 13
   }
 }, "Last updated ", props.dateToday), __jsx(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_1___default.a, {
@@ -2268,7 +2272,7 @@ const Index = props => __jsx(_material_ui_core_Container__WEBPACK_IMPORTED_MODUL
   __self: undefined,
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 57,
+    lineNumber: 60,
     columnNumber: 13
   }
 }, props.statToday.Active ? props.statToday.Active : "N/A")))), __jsx(_material_ui_core_Grid__WEBPACK_IMPORTED_MODULE_4___default.a, {
@@ -2277,7 +2281,7 @@ const Index = props => __jsx(_material_ui_core_Container__WEBPACK_IMPORTED_MODUL
   __self: undefined,
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 64,
+    lineNumber: 67,
     columnNumber: 7
   }
 }, __jsx(_material_ui_core_Card__WEBPACK_IMPORTED_MODULE_3___default.a, {
@@ -2287,14 +2291,14 @@ const Index = props => __jsx(_material_ui_core_Container__WEBPACK_IMPORTED_MODUL
   __self: undefined,
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 65,
+    lineNumber: 68,
     columnNumber: 9
   }
 }, __jsx(_material_ui_core_CardContent__WEBPACK_IMPORTED_MODULE_6___default.a, {
   __self: undefined,
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 66,
+    lineNumber: 69,
     columnNumber: 11
   }
 }, __jsx(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_1___default.a, {
@@ -2303,7 +2307,7 @@ const Index = props => __jsx(_material_ui_core_Container__WEBPACK_IMPORTED_MODUL
   __self: undefined,
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 67,
+    lineNumber: 70,
     columnNumber: 13
   }
 }, "Total deaths"), __jsx(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_1___default.a, {
@@ -2312,7 +2316,7 @@ const Index = props => __jsx(_material_ui_core_Container__WEBPACK_IMPORTED_MODUL
   __self: undefined,
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 70,
+    lineNumber: 73,
     columnNumber: 13
   }
 }, "Last updated ", props.dateToday), __jsx(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_1___default.a, {
@@ -2320,7 +2324,7 @@ const Index = props => __jsx(_material_ui_core_Container__WEBPACK_IMPORTED_MODUL
   __self: undefined,
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 73,
+    lineNumber: 76,
     columnNumber: 13
   }
 }, props.statToday.Deaths ? props.statToday.Deaths : "N/A")))), __jsx(_material_ui_core_Grid__WEBPACK_IMPORTED_MODULE_4___default.a, {
@@ -2329,7 +2333,7 @@ const Index = props => __jsx(_material_ui_core_Container__WEBPACK_IMPORTED_MODUL
   __self: undefined,
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 80,
+    lineNumber: 83,
     columnNumber: 7
   }
 }, __jsx(_material_ui_core_Card__WEBPACK_IMPORTED_MODULE_3___default.a, {
@@ -2339,14 +2343,14 @@ const Index = props => __jsx(_material_ui_core_Container__WEBPACK_IMPORTED_MODUL
   __self: undefined,
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 81,
+    lineNumber: 84,
     columnNumber: 9
   }
 }, __jsx(_material_ui_core_CardContent__WEBPACK_IMPORTED_MODULE_6___default.a, {
   __self: undefined,
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 82,
+    lineNumber: 85,
     columnNumber: 11
   }
 }, __jsx(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_1___default.a, {
@@ -2355,7 +2359,7 @@ const Index = props => __jsx(_material_ui_core_Container__WEBPACK_IMPORTED_MODUL
   __self: undefined,
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 83,
+    lineNumber: 86,
     columnNumber: 13
   }
 }, "Total recovered"), __jsx(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_1___default.a, {
@@ -2364,7 +2368,7 @@ const Index = props => __jsx(_material_ui_core_Container__WEBPACK_IMPORTED_MODUL
   __self: undefined,
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 86,
+    lineNumber: 89,
     columnNumber: 13
   }
 }, "Last updated ", props.dateToday), __jsx(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_1___default.a, {
@@ -2372,7 +2376,7 @@ const Index = props => __jsx(_material_ui_core_Container__WEBPACK_IMPORTED_MODUL
   __self: undefined,
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 89,
+    lineNumber: 92,
     columnNumber: 13
   }
 }, props.statToday.Recovered ? props.statToday.Recovered : "N/A"))))));
@@ -2565,6 +2569,17 @@ module.exports = require("@material-ui/core/styles");
 /***/ (function(module, exports) {
 
 module.exports = require("clsx");
+
+/***/ }),
+
+/***/ "darkmode-js":
+/*!******************************!*\
+  !*** external "darkmode-js" ***!
+  \******************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("darkmode-js");
 
 /***/ }),
 
