@@ -15,7 +15,22 @@ import { Line } from "react-chartjs-2";
 import { makeStyles } from "@material-ui/core/styles";
 import Darkmode from "darkmode-js";
 
-new Darkmode().showWidget();
+var options = {
+  bottom: "64px", // default: '32px'
+  // right: "unset", // default: '32px'
+  // left: "32px", // default: 'unset'
+  time: "0.5s", // default: '0.3s'
+  mixColor: "#fff", // default: '#fff'
+  backgroundColor: "#fff", // default: '#fff'
+  buttonColorDark: "#100f2c", // default: '#100f2c'
+  buttonColorLight: "#fff", // default: '#fff'
+  saveInCookies: false, // default: true,
+  label: "<span style='font-size: 25px;'>🌙</span>", // default: ''
+  autoMatchOsTheme: true, // default: true
+};
+
+const darkmode = new Darkmode(options);
+darkmode.showWidget();
 
 const Index = (props) => (
   <Container style={{ textAlign: "center" }}>
@@ -23,7 +38,7 @@ const Index = (props) => (
       Hi! Welcome to the <br /> Covid App
     </Typography>
     <div style={{ color: "rgb(255, 99, 132)", paddingBottom: 50 }}>
-      Built with ❤️ by Anan
+      Built with ❤️ by Anan & Sabira
     </div>
     <Typography variant="h3" component="h1" gutterBottom>
       Total cases of Covid-19 in Bangladesh 2020 📈
