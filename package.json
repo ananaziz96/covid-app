@@ -18,7 +18,7 @@
     "chart.js": "^2.9.3",
     "darkmode-js": "^1.5.5",
     "isomorphic-unfetch": "^3.0.0",
-    "moment": "^2.24.0",
+    "moment": "^2.29.4",
     "next": "^9.3.4",
     "react": "^16.13.1",
     "react-chartjs-2": "^2.9.0",
